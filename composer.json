@@ -9,12 +9,15 @@
             "email": "odd.greg@gmail.com"
         }
     ],
+    "repositories"     : [
+        { "type": "vcs", "url": "https://github.com/Formula9/Collections.git" }
+    ],
     "autoload"         : {
-        "classmap"             : [
+        "classmap": [
             "src",
             "tests"
         ],
-        "psr-4"                : {
+        "psr-4"   : {
             "Nine\\Collections\\": "src",
             "Nine\\Exceptions\\" : "src/exceptions",
             "Nine\\Traits\\"     : "src/traits"
