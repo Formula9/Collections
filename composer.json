@@ -27,7 +27,6 @@
     "require-dev"      : {
         "phpunit/phpunit": "^5.1@dev",
         "tracy/tracy"    : "^2.4@dev"
-
     },
 
     "minimum-stability": "dev"
