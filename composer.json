@@ -1,0 +1,31 @@
+{
+    "name"             : "formula9/collections",
+    "description"      : "A library of classes implementing collections.",
+    "type"             : "library",
+    "license"          : "MIT",
+    "authors"          : [
+        {
+            "name" : "Greg Truesdell",
+            "email": "odd.greg@gmail.com"
+        }
+    ],
+    "autoload"         : {
+        "classmap"             : [
+            "src",
+            "tests"
+        ],
+        "psr-4"                : {
+            "Nine\\Collections\\": "src",
+            "Nine\\Exceptions\\" : "src/exceptions",
+            "Nine\\Traits\\"     : "src/traits"
+        }
+    },
+    "require"          : { },
+    "require-dev"      : {
+        "phpunit/phpunit": "^5.1@dev",
+        "tracy/tracy"    : "^2.4@dev"
+
+    },
+
+    "minimum-stability": "dev"
+}
