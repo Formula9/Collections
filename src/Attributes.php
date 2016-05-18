@@ -16,7 +16,7 @@ use Nine\Traits\WithImmutability;
  * @version 0.4.2
  * @author  Greg Truesdell
  */
-class Attributes implements \ArrayAccess
+class Attributes implements \ArrayAccess, AttributesInterface
 {
     use WithImmutability;
 

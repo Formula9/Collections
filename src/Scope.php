@@ -15,7 +15,7 @@ use Nine\Traits\WithItemTransforms;
 /**
  * **Scope is a context container.**
  */
-class Scope implements \ArrayAccess, \Countable, \JsonSerializable
+class Scope implements \ArrayAccess, \Countable, \JsonSerializable, ScopeInterface
 {
     use WithItemImport;
     use WithItemTransforms;

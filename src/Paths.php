@@ -13,7 +13,7 @@ use Nine\Traits\WithItemImportExport;
 /**
  * **Paths provides a simple interface for handling paths in the F9 framework.**
  */
-class Paths extends Collection
+class Paths extends Collection implements PathsInterface
 {
     // file and type import and export methods
     use WithItemImportExport;
