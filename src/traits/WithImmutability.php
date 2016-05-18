@@ -44,7 +44,7 @@ trait WithImmutability
      */
     public function offsetUnset($offset)
     {
-        throw new ImmutableViolationException('Cannot remove an immutable item from attributes.');
+        throw new ImmutableViolationException('Cannot remove an immutable item.');
     }
 
 }
