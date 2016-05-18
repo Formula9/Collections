@@ -5,5 +5,5 @@ This is to keep the package contents version in sync with the framework version
 until release.
 
 ## [0.4.2.x]
-## First (initial) commit.
+### First (initial) commit.
 
