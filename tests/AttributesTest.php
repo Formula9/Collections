@@ -53,7 +53,7 @@ class AttributesTest extends \PHPUnit_Framework_TestCase
         static::assertTrue(isset($this->attributes['test']));
         static::assertEquals('test array assignment', $attributes['test']);
 
-        $this->expectException('Nine\Exceptions\ImmutableViolationException');
+        $this->expectException(Exceptions\ImmutableViolationException::class);
         unset($attributes['test']);
     }
 

@@ -1,6 +1,6 @@
 <?php namespace Nine\Traits;
 
-use Nine\Exceptions\ImmutableViolationException;
+use Nine\Collections\Exceptions\ImmutableViolationException;
 
 /**
  * This trait exposes immutability violation exceptions for common

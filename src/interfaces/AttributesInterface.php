@@ -6,7 +6,7 @@
  * @author  Greg Truesdell <odd.greg@gmail.com>
  */
 
-use Nine\Exceptions\ImmutableViolationException;
+use Nine\Collections\Exceptions\ImmutableViolationException;
 
 /**
  * **A simple immutable attribute collection. **

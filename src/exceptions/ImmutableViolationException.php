@@ -1,4 +1,4 @@
-<?php namespace Nine\Exceptions;
+<?php namespace Nine\Collections\Exceptions;
 
 /**
  * Thrown when an attempt is made to alter an immutable object/property.

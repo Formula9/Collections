@@ -18,9 +18,9 @@
             "tests"
         ],
         "psr-4"   : {
-            "Nine\\Collections\\": "src",
-            "Nine\\Exceptions\\" : "src/exceptions",
-            "Nine\\Traits\\"     : "src/traits"
+            "Nine\\Collections\\"            : "src",
+            "Nine\\Collections\\Exceptions\\": "src/exceptions",
+            "Nine\\Collections\\Traits\\"    : "src/traits"
         }
     },
     "require"          : { },
