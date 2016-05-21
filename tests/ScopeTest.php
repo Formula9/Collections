@@ -1,6 +1,6 @@
 <?php namespace Nine\Collections;
 
-use function Nine\tuples;
+use function Nine\Library\tuples;
 
 /**
  * Test the Collection Class

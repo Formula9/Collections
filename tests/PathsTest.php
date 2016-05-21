@@ -6,7 +6,7 @@
  * @author  Greg Truesdell <odd.greg@gmail.com>
  */
 
-use Nine\Lib;
+use Nine\Library\Lib;
 use Symfony\Component\Yaml\Yaml;
 
 /**

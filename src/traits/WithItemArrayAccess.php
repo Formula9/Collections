@@ -12,8 +12,8 @@
  * @author  Greg Truesdell <odd.greg@gmail.com>
  */
 
-use Nine\Lib;
-use function Nine\value;
+use Nine\Library\Lib;
+use function Nine\Library\value;
 
 /**
  * WithItemArrayAccess expects that an $items property exists. It cannot operate without it.

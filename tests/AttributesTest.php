@@ -1,6 +1,6 @@
 <?php namespace Nine\Collections;
 
-use Nine\Lib;
+use Nine\Library\Lib;
 
 /**
  * Test the Collection Class

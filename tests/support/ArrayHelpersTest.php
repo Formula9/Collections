@@ -1,11 +1,10 @@
 <?php namespace Nine;
 
-/**
- * @package Nine
- * @author  Greg Truesdell <odd.greg@gmail.com>
- */
-
-use Forge;
+    /**
+     * @package Nine
+     * @author  Greg Truesdell <odd.greg@gmail.com>
+     */
+use Nine\Library\Lib;
 
 /**
  * Test the framework support functions

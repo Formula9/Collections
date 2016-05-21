@@ -5,6 +5,8 @@
  * @author  Greg Truesdell <odd.greg@gmail.com>
  */
 
+use Nine\Library\Lib;
+
 /**
  * Test the framework support functions
  *

@@ -1,6 +1,6 @@
 <?php namespace Nine\Collections;
 
-use Nine\Exceptions\ImmutableViolationException;
+use Nine\Collections\Exceptions\ImmutableViolationException;
 use Nine\Traits\WithImmutability;
 
 /**
