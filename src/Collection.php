@@ -127,7 +127,7 @@ class Collection implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonS
             return count($this->items) > 0 ? reset($this->items) : NULL;
         }
 
-        return Lib::array_first($this->items, $callback, $default);
+        return Lib::array_first_match($this->items, $callback, $default);
     }
 
     /**
