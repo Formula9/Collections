@@ -456,7 +456,7 @@ class Collection implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonS
      */
     public function pluck($value, $key = NULL)
     {
-        return new static(Lib::array_pluck($this->items, $value, $key));
+        return new static(Lib::array_get($this->items, $value, $key));
     }
 
     /**

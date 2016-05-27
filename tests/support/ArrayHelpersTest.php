@@ -125,7 +125,7 @@ class ArrayHelpersTest extends \PHPUnit_Framework_TestCase
                 'candy.start',
                 'candy.end',
             ],
-            Lib::str_to_a('apples beets candy.start candy.end')
+            Lib::array_from_string('apples beets candy.start candy.end')
         );
 
         ### s_to_aa - string to associative array
@@ -137,7 +137,7 @@ class ArrayHelpersTest extends \PHPUnit_Framework_TestCase
                 'candy.start' => 'now',
                 'candy.end'   => 'never',
             ],
-            Lib::assoc_from_str('apples:10, beets:nope, candy.start:now, candy.end:never')
+            Lib::assoc_from_string('apples:10, beets:nope, candy.start:now, candy.end:never')
         );
 
     }
@@ -178,7 +178,7 @@ class ArrayHelpersTest extends \PHPUnit_Framework_TestCase
 
         ### (simple) array_make_compare_list(array $array)
 
-        $worker = Lib::assoc_from_str('name:Laura, access:Administrator');
+        $worker = Lib::assoc_from_string('name:Laura, access:Administrator');
         static::assertEquals(
             [
                 'name=`Laura`',
@@ -196,7 +196,7 @@ class ArrayHelpersTest extends \PHPUnit_Framework_TestCase
     {
         ### array_fill_object($obj, $array)
 
-        $obj = Lib::cast_array_to_object(Lib::assoc_from_str('name:Greg, location:Vancouver, cat:Julius'));
+        $obj = Lib::cast_array_to_object(Lib::assoc_from_string('name:Greg, location:Vancouver, cat:Julius'));
         static::assertEquals(
             [
                 'name'     => 'Greg',
@@ -205,7 +205,7 @@ class ArrayHelpersTest extends \PHPUnit_Framework_TestCase
             ],
             Lib::cast_object_as_array($obj)
         );
-        $obj = Lib::fill_object($obj, Lib::assoc_from_str('need:Coffee'));
+        $obj = Lib::fill_object($obj, Lib::assoc_from_string('need:Coffee'));
         static::assertEquals(
             [
                 'name'     => 'Greg',
@@ -225,13 +225,13 @@ class ArrayHelpersTest extends \PHPUnit_Framework_TestCase
 
         static::assertEquals(
             [
-                'stdClass' => Lib::assoc_from_str('one:1, two:2, three:3, four:4'),
+                'stdClass' => Lib::assoc_from_string('one:1, two:2, three:3, four:4'),
             ],
-            Lib::value_class($obj, Lib::assoc_from_str('one:1, two:2, three:3, four:4'))
+            Lib::value_class($obj, Lib::assoc_from_string('one:1, two:2, three:3, four:4'))
         );
         # non-object returns null
         /** @noinspection PhpParamsInspection */
-        static::assertNull(Lib::value_class('not an object', Lib::assoc_from_str('one:1, two:2, three:3, four:4')));
+        static::assertNull(Lib::value_class('not an object', Lib::assoc_from_string('one:1, two:2, three:3, four:4')));
 
         ### pivot_array_on_index(array $input)
 
@@ -284,7 +284,7 @@ class ArrayHelpersTest extends \PHPUnit_Framework_TestCase
                 0 => 'one',
                 1 => 'two',
             ],
-            Lib::array_to_numeric_index(Lib::str_to_a('one two'))
+            Lib::array_to_numeric_index(Lib::array_from_string('one two'))
         );
 
         ### get_array_value_safely($index, $array)
