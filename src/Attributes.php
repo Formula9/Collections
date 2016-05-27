@@ -94,7 +94,6 @@ class Attributes implements \ArrayAccess, AttributesInterface
      */
     public function offsetExists($offset)
     {
-        //return isset($this->items[$offset]);
         return array_key_exists($offset, $this->items);
     }
 
