@@ -3,13 +3,8 @@
 /**
  * **A General Purpose Collection.**
  *
- * This unit originates with Illuminate Collection, and has been imported
- * as a dependency
- *
  * @package Nine Collections
  * @version 0.4.2
- * @author  Taylor Otwell
- * @author  Greg Truesdell
  */
 
 use Nine\Library\Lib;
