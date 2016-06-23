@@ -7,7 +7,7 @@
  */
 
 use Nine\Collections\Scope;
-use Nine\Lib;
+use Nine\Library\Lib;
 
 if (defined('DEBUG_HELPERS_LOADED')) {
     return TRUE;

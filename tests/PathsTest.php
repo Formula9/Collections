@@ -58,6 +58,11 @@ class PathsTest extends \PHPUnit_Framework_TestCase
         $this->assertArrayHasKey('orange', $paths, 'paths should have merged `orange`.');
         $this->assertEquals(Lib::normalize_path('tests/config'), $paths['orange']);
 
+        echo 'here';
+        $paths->add('fails', '/beatles.php/~');
+
+        expose($paths['fails']);
+
     }
 
 }
