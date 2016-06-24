@@ -46,7 +46,7 @@ class Config extends Collection implements ConfigInterface
      */
     public function importFile($file)
     {
-        $this->import_files([$file], '.php');
+        $this->import_files($file, '.php');
     }
 
     /**
@@ -78,11 +78,12 @@ class Config extends Collection implements ConfigInterface
      */
     public function setBasePath(string $path)
     {
-        if (file_exists($path)) {
+        if (is_dir($path)) {
             $this->base_path = $path;
         }
-
-        throw new \InvalidArgumentException("Config base path `$path` does not exist.");
+        else {
+            throw new \InvalidArgumentException("Config base path `$path` does not exist.");
+        }
     }
 
     /**
@@ -165,6 +166,7 @@ class Config extends Collection implements ConfigInterface
         if ( ! $this->offsetExists($key)) {
             switch ($extension) {
                 case '.php':
+
                     if ( ! file_exists($file_path)) {
                         throw new \InvalidArgumentException("Config file $file_path does not exist.");
                     }
