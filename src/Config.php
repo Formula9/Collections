@@ -74,9 +74,10 @@ class Config extends Collection implements ConfigInterface
     /**
      * @param string $path
      *
+     * @return Config
      * @throws \InvalidArgumentException
      */
-    public function setBasePath(string $path)
+    public function setBasePath(string $path) : Config
     {
         if (is_dir($path)) {
             $this->base_path = $path;
@@ -84,6 +85,8 @@ class Config extends Collection implements ConfigInterface
         else {
             throw new \InvalidArgumentException("Config base path `$path` does not exist.");
         }
+
+        return $this;
     }
 
     /**
