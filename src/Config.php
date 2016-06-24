@@ -43,7 +43,7 @@ class Config extends Collection implements ConfigInterface
      */
     public function importFile($file)
     {
-        $this->import_files([$file], '*.php');
+        $this->import_files([$file], '.php');
     }
 
     /**
