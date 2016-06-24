@@ -24,6 +24,9 @@ class Config extends Collection implements ConfigInterface
     // for \ArrayAccess methods that support `dot` indexes
     use WithItemArrayAccess;
 
+    /** @var string $base_path The base path to a configuration directory. */
+    protected $base_path = '';
+
     /**
      * @param array $import
      */
@@ -66,6 +69,20 @@ class Config extends Collection implements ConfigInterface
         $this->import_files($this->parse_folder($base_path, $mask), $extension);
 
         return $this;
+    }
+
+    /**
+     * @param string $path
+     *
+     * @throws \InvalidArgumentException
+     */
+    public function setBasePath(string $path)
+    {
+        if (file_exists($path)) {
+            $this->base_path = $path;
+        }
+
+        throw new \InvalidArgumentException("Config base path `$path` does not exist.");
     }
 
     /**
@@ -141,10 +158,17 @@ class Config extends Collection implements ConfigInterface
             throw new \InvalidArgumentException("Invalid import extension: `$extension`");
         }
 
+        # add the base path if necessary
+        $file_path = file_exists($file_path) ? $file_path : $this->base_path . "/$file_path";
+
         # include only if the root key does not exist
         if ( ! $this->offsetExists($key)) {
             switch ($extension) {
                 case '.php':
+                    if ( ! file_exists($file_path)) {
+                        throw new \InvalidArgumentException("Config file $file_path does not exist.");
+                    }
+
                     /** @noinspection UntrustedInclusionInspection */
                     $import = include "$file_path";
                     break;
