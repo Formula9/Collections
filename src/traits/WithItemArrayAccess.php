@@ -13,7 +13,6 @@
  */
 
 use Nine\Library\Lib;
-use function Nine\Library\value;
 
 /**
  * WithItemArrayAccess expects that an $items property exists. It cannot operate without it.
